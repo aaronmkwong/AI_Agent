@@ -1,5 +1,3 @@
-# ...
-
 from functions.config import MAX_CHARS
 import os 
 
@@ -19,9 +17,11 @@ def get_file_content(working_directory, file_path):
            
     try:
         
+        # read only the max charcaters specified in the variable from the config.py file
         with open(abs_target, "r") as f:
              file_content_string = f.read(MAX_CHARS)
         
+        # append notificaiton if truncated
         if len(file_content_string) == MAX_CHARS:
             return file_content_string + f'...File "{file_path}" truncated at 10000 characters'
         

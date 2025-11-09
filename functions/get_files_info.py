@@ -1,6 +1,3 @@
-# build a “tool-call” function an LLM can use to list a directory’s contents as plain text
-# LLMs operate on strings, so everything—including errors—must be returned as strings
-
 import os 
 
 def get_files_info(working_directory, directory="."):
