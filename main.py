@@ -4,6 +4,7 @@ import os                             # Environment variables and OS interaction
 from dotenv import load_dotenv        # Load variables from a .env file into the environment
 from google.genai import types        # Types for constructing message contents
 import argparse                       # Parse command-line arguments
+from functions.config import *        # Get variables
 
 # Define positional prompt
 parser = argparse.ArgumentParser()    # Create an argument parser for the CLI
@@ -28,8 +29,10 @@ def main():
 
     # Send the request to the model with the conversation contents
     resp = client.models.generate_content(
-        model="gemini-2.0-flash-001",
+        model=model_name,
         contents=messages,
+        config=types.GenerateContentConfig(system_instruction=system_prompt),
+
     )
 
     if args.verbose: # Checks if 'verbose' flag passed as a command-line argument
