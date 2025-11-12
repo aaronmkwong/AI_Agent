@@ -1,5 +1,7 @@
 import os 
+from google.genai import types 
 
+# get file size, whether is a directory 
 def get_files_info(working_directory, directory="."):
     
     # resolve absolute paths for the working dir and the target (joined) path
@@ -27,7 +29,22 @@ def get_files_info(working_directory, directory="."):
     
     except Exception as e:
         # always return errors as strings
-        return f'Error: {e}'  
+        return f'Error: {e}'
+
+# build a "declaration" or "schema" for a function, which tells the LLM how to use the function
+schema_get_files_info = types.FunctionDeclaration(
+    name="get_files_info", # we won't allow the LLM to specify the working_directory parameter so hard code that
+    description="Lists files in the specified directory along with their sizes, constrained to the working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "directory": types.Schema(
+                type=types.Type.STRING,
+                description="The directory to list files from, relative to the working directory. If not provided, lists files in the working directory itself.",
+            ),
+        },
+    ),
+)  
     
     
      
