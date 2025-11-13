@@ -31,7 +31,8 @@ def get_files_info(working_directory, directory="."):
         # always return errors as strings
         return f'Error: {e}'
 
-# build a "declaration" or "schema" for a function, which tells the LLM how to use the function
+# build a "declaration" or "schema" for multiple functions, which tells the LLM how to use the function
+
 schema_get_files_info = types.FunctionDeclaration(
     name="get_files_info", # we won't allow the LLM to specify the working_directory parameter so hard code that
     description="Lists files in the specified directory along with their sizes, constrained to the working directory.",
@@ -45,6 +46,53 @@ schema_get_files_info = types.FunctionDeclaration(
         },
     ),
 )  
+
+schema_get_file_content = types.FunctionDeclaration(
+    name="get_file_content", # we won't allow the LLM to specify the working_directory parameter so hard code that
+    description="Reads file contents in the specified directory, constrained to the working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "directory": types.Schema(
+                type=types.Type.STRING,
+                description="The directory to list files from, relative to the working directory. If not provided, lists files in the working directory itself.",
+            ),
+        },
+    ),
+)  
+
+schema_run_python_file = types.FunctionDeclaration(
+    name="run_python_file", # we won't allow the LLM to specify the working_directory parameter so hard code that
+    description="Executes Python files with optional arguments in the specified directory, constrained to the working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "directory": types.Schema(
+                type=types.Type.STRING,
+                description="The directory to list files from, relative to the working directory. If not provided, lists files in the working directory itself.",
+            ),
+        },
+    ),
+)  
+
+schema_write_file = types.FunctionDeclaration(
+    name="write_file",
+    description="Write or overwrite a file within the working directory.",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "file_path": types.Schema(
+                type=types.Type.STRING,
+                description="Path to the file, relative to the working directory."
+            ),
+            "content": types.Schema(
+                type=types.Type.STRING,
+                description="Exact text to write to the file."
+            ),
+        },
+        required=["file_path", "content"],
+    ),
+)
     
     
      
