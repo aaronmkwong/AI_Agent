@@ -6,6 +6,7 @@ from google.genai import types         # Types for constructing message contents
 import argparse                        # Parse command-line arguments
 from functions.config import *         # Get variables
 from functions.get_files_info import * # Get schema declaration to tell the LLM how to use the function
+from functions.call_function import *  # Get function that handles the abstract task of calling one of our four functions
 
 # Define positional prompt
 parser = argparse.ArgumentParser()    # Create an argument parser for the CLI
@@ -59,10 +60,18 @@ def main():
         print(f"Prompt tokens: {prompt_tokens}")
         print(f"Response tokens: {resp_tokens}")
 
-    # if function_calls (list of function-call parts) contains any items, iterate over them and print the function name and arguments else print the model's text response
+    # if function_calls (list of function-call parts) contains any items, iterate over them and call the function name and arguments else print the model's text response
     if len(resp.function_calls) > 0:
         for _ in resp.function_calls:
-            print(f"Calling function: {_.name}({_.args})") 
+
+            function_call_result = call_function(_, verbose=args.verbose)
+
+            if function_call_result.parts[0].function_response.response:
+                return print(f"-> {function_call_result.parts[0].function_response.response}")
+
+            else:
+                raise Exception(f'Error: {Exception}')
+
     else:
         print(resp.text)                   
 
