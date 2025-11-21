@@ -15,3 +15,7 @@ NOTE: The program is for demonstration of a personal learning project only and s
 Addition is Out of Order
 
 <img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_01.jpg" width="600" height="600">
+
+It Fixes Bug
+
+img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_02.jpg" width="600" height="600">
