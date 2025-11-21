@@ -22,4 +22,4 @@ It Fixes Bug
 
 Confirm that Bug Is Fixed 
 
-<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_03.jpg" width="900" height="900">
+<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_03.jpg" width="700" height="700">
