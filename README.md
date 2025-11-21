@@ -1,4 +1,4 @@
-This project builds an LLM “agent” that can take goals in natural language and accomplish them by calling safe, purpose-built functions (“tools”). Each tool is designed to return plain text, enforce strict sandbox boundaries, and handle errors gracefully. The agent plans, calls tools iteratively based on results, and uses the outputs to decide its next steps—like a mini operating system for AI actions.
+This project builds and interacts (via CLI) with an LLM “agent” that can take goals in natural language and accomplish them by calling safe, purpose-built functions (“tools”). Each tool is designed to return plain text, enforce strict sandbox boundaries, and handle errors gracefully. The agent plans, calls tools iteratively based on results, and uses the outputs to decide its next steps—like a mini operating system for AI actions.
 
 Tools like file system inspection, reading/writing files, and running commands are wired into an agent loop with guardrails. Prompt design, result parsing, and failure recovery are practiced while keeping the agent constrained to a working directory and a limited capability set. The emphasis is on reliability, safety, and deterministic interfaces—so the agent remains predictable.
 
@@ -6,6 +6,6 @@ Real-world use cases include developer assistants that scaffold projects, refact
 
 NOTE: The program is for demonstration of a personal learning project only and should not be used by anyone other than the author specific to the learning tasks for the Boot Dev course it pertains to as it does not have all the security and safety features that a production AI agent would have. 
 
-<u> CLI output of AI agent natural-language explanation of what it discovered about the calculator after repeatedly calling tools like reading files and running code, then reasoning over its results </u>
+<ins> What it discovered about the calculator after repeatedly calling tools like reading files and running code, then reasoning over its results </ins>
 
 <img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot.jpg" width="1000" height="1000">
