@@ -5,3 +5,6 @@ Tools like file system inspection, reading/writing files, and running commands a
 Real-world use cases include developer assistants that scaffold projects, refactor code, and run tests; data ops helpers that ingest files, transform them, and produce reports; and customer support workflows that triage tickets, summarize logs, and draft responses. Teams could also use these agents for documentation maintenance, CI/CD triage, and lightweight RPA—automating repetitive tasks safely within predefined boundaries.
 
 NOTE: The program is for demonstration of a personal learning project only and should not be used by anyone other than the author specific to the learning tasks for the Boot Dev course it pertains to as it does not have all the security and safety features that a production AI agent would have. 
+
+
+<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/251121 1022AM AI Agent Project Screenshot.jpg" width="1000" height="1000">
