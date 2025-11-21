@@ -6,5 +6,6 @@ Real-world use cases include developer assistants that scaffold projects, refact
 
 NOTE: The program is for demonstration of a personal learning project only and should not be used by anyone other than the author specific to the learning tasks for the Boot Dev course it pertains to as it does not have all the security and safety features that a production AI agent would have. 
 
+<u> CLI output of AI agent natural-language explanation of what it discovered about the calculator after repeatedly calling tools like reading files and running code, then reasoning over its results </u>
 
 <img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot.jpg" width="1000" height="1000">
