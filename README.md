@@ -18,4 +18,4 @@ Addition is Out of Order
 
 It Fixes Bug
 
-<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_02.jpg" width="900" height="900">
+<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_02.jpg" width="800" height="800">
