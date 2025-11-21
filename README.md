@@ -12,6 +12,6 @@ NOTE: The program is for demonstration of a personal learning project only and s
 
 <ins> How it can change file code to correct bugs, e.g. order of operations. </ins>
 
-Addition is Out of Order:
+Addition is Out of Order
 
-<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_01.jpg" width="800" height="800">
+<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_01.jpg" width="500" height="500">
