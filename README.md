@@ -14,4 +14,4 @@ NOTE: The program is for demonstration of a personal learning project only and s
 
 Addition is Out of Order:
 
-<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_01.jpg" width="1000" height="1000">
+<img src="https://github.com/aaronmkwong/AI_Agent/blob/main/screenshots/251121_1022AM_AI_Agent_Project_Screenshot_01.jpg" width="800" height="800">
